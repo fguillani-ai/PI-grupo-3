@@ -95,6 +95,7 @@ header {
     justify-content: center;
     gap: 20px;
     padding: 40px;
+    align-items: stretch;
 }
 .productos .articulo {
     flex: 1 1 250px;
@@ -108,6 +109,12 @@ header {
     transition: transform 0.2s;
     padding: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-height: 420px;
 }
 .articulo:hover {
     transform: scale(1.05);
@@ -123,6 +130,20 @@ header {
 }
 .articulo p {
     margin: 5px 0;
+}
+.boton{
+    background-color: #415A3B;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    align-self: center;
 }
 footer {
     background-color: #0a2e12;
@@ -169,4 +190,117 @@ footer {
     padding-top: 15px;
     border-top: 1px solid #a3d18f;
     font-size: 14px;
+}
+
+/* product.html */
+.detalles{
+    max-width: 1000;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.detalles h1{
+    font-size: 32px;
+    color: #2E7D32;
+    margin-bottom: 15px;
+}
+.detalles img.banner{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.detalle h2,
+.detalle h3,
+.detalle h4{
+    margin: 10px 0;
+    color: #415A3B;
+}
+.detalle h3{
+    font-weight: bold;
+}
+.detalle h4{
+    font-size: 15px;
+}
+.review-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.review-form h2 {
+  margin-bottom: 20px;
+  color: #2E7D32;
+  text-align: center;
+}
+.review-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.review-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #415A3B;
+}
+.review-form input,
+.review-form select,
+.review-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+.review-form button {
+  background: #415A3B;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.review-form button:hover {
+  background: #2E7D32;
+}
+.reviews {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-top: 2px solid #a3d18f;
+}
+.reviews h2 {
+  margin-bottom: 20px;
+  color: #2E7D32;
+  font-size: 1.5em;
+}
+.review {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+.review-rating {
+  font-size: 1.2em;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+.review-text {
+  margin: 0;
+  color: #333;
 }

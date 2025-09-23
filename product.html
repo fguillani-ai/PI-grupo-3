@@ -31,8 +31,57 @@
         <a href="#">Celíacos</a>
         <a href="#">Ofertas</a>
     </nav>
-    <section>
-        
+    <section class="detalles">
+        <h1>Almendras</h1>
+        <img src="./css/img/Almendras.png" class="banner">
+        <h2>Marca</h2>
+        <h2>Descripción</h2>
+        <h3>Precio</h3>
+        <h3>Categoria</h3>
+        <h4>Stock</h4>
+        <h4>lista de tags (hasta 3)</h4>
+    </section>
+    <section class="review-form">
+        <h2>Dejá tu reseña</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                <option value="4">⭐⭐⭐⭐ (4)</option>
+                <option value="3">⭐⭐⭐ (3)</option>
+                <option value="2">⭐⭐ (2)</option>
+                <option value="1">⭐ (1)</option>
+            </select>
+
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea>
+            <button type="submit">Enviar reseña</button>
+        </form>
+    </section>
+    <section class="reviews">
+        <h2>Reseñas de usuarios</h2>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-user">María López</span>
+                <span class="review-date">15/09/2025</span>
+            </div>
+            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">Excelente producto, muy frescas y sabrosas las almendras.</p>
+        </div>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-user">Juan Pérez</span>
+                <span class="review-date">10/09/2025</span>
+            </div>
+            <div class="review-rating">⭐⭐⭐⭐</div>
+                <p class="review-text">Muy buenas, aunque me gustaría que vengan en más tamaños de envase.</p>
+        </div>
     </section>
     <footer class="footer">
         <div class="fContainer">
