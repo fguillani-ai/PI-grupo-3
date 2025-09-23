@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register NF</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -24,47 +24,31 @@
             </div>
         </section>
     </header>
-    <section class="detalles">
-        <h1>Almendras</h1>
-        <img src="./css/img/Almendras.png" class="banner">
-        <h2>Blue Dimond</h2>
-        <h2>Crujientes y nutritivas, las almendras son fuente de proteínas vegetales, grasas saludables y antioxidantes naturales. Aportan energía de calidad, ayudan a cuidar el corazón y brindan saciedad. Perfectas como snack o para sumar a tus desayunos, ensaladas y recetas dulces o saladas.</h2>
-        <div class="infoNut">
-            <ul>
-                <li>Calorías: ~170 kcal</li>
-                <li>Proteínas: ~6 g</li>
-                <li>Grasas: ~15 g</li>
-                <li>Carbohidratos: ~6 g</li>
-            </ul>
-        </div>
-        <h3>$1500/500g</h3>
-        <h3>Frutos Secos</h3>
-        <h4>24 kg disponibles</h4>
-        <h4>lista de tags (hasta 3)</h4>
-    </section>
-    <section class="review-form">
-        <h2>Dejá tu reseña</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required>
-
-            <label for="rating">Rating:</label>
-            <select id="rating" name="rating" required>
-                <option value="5">5 estrellas</option>
-                <option value="4">4 estrellas</option>
-                <option value="3">3 estrellas</option>
-                <option value="2">2 estrellas</option>
-                <option value="1">1 estrella</option>
-            </select>
-
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" name="comentario" rows="4" required></textarea>
-            <button type="submit">Enviar reseña</button>
-        </form>
-    </section>
+    <h2 class="bienvenido">REGISTRATE</h2>
+        <section class="formularioR">
+            <div class="ec">
+                <label for="nombre">Email</label>
+                <input type="text" name="email" placeholder="Ingresá tu email">
+                <p class="rojo">Obligatorio.</p>
+            </div>
+            <div class="ec">
+                <label for="contra">Contraseña</label>
+                <input type="text" name="contra" placeholder="password">
+                <p class="rojo">Obligatorio.</p>
+            </div>
+            <div class="ec">
+                <label for="contra"> Repetir contraseña</label>
+                <input type="text" name="contra" placeholder="password">
+                <p class="rojo">Obligatorio.</p>
+            </div>
+            <div class="checkboxR">
+                <input type="checkbox" name="G"><span>Acepto los terminos y condiciones.</span>
+            </div>
+            <div class="rc">
+                <a href="index.html" class="botonLR">Registrarme</a>
+                <a href="login.html" class="botonLR">Ya tengo cuenta</a>    
+            </div>
+        </section>
     <footer class="footer">
         <div class="fContainer">
             <div class="fSection">

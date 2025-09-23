@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login NF</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -24,46 +24,26 @@
             </div>
         </section>
     </header>
-    <section class="detalles">
-        <h1>Almendras</h1>
-        <img src="./css/img/Almendras.png" class="banner">
-        <h2>Blue Dimond</h2>
-        <h2>Crujientes y nutritivas, las almendras son fuente de proteínas vegetales, grasas saludables y antioxidantes naturales. Aportan energía de calidad, ayudan a cuidar el corazón y brindan saciedad. Perfectas como snack o para sumar a tus desayunos, ensaladas y recetas dulces o saladas.</h2>
-        <div class="infoNut">
-            <ul>
-                <li>Calorías: ~170 kcal</li>
-                <li>Proteínas: ~6 g</li>
-                <li>Grasas: ~15 g</li>
-                <li>Carbohidratos: ~6 g</li>
-            </ul>
-        </div>
-        <h3>$1500/500g</h3>
-        <h3>Frutos Secos</h3>
-        <h4>24 kg disponibles</h4>
-        <h4>lista de tags (hasta 3)</h4>
-    </section>
-    <section class="review-form">
-        <h2>Dejá tu reseña</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required>
-
-            <label for="rating">Rating:</label>
-            <select id="rating" name="rating" required>
-                <option value="5">5 estrellas</option>
-                <option value="4">4 estrellas</option>
-                <option value="3">3 estrellas</option>
-                <option value="2">2 estrellas</option>
-                <option value="1">1 estrella</option>
-            </select>
-
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" name="comentario" rows="4" required></textarea>
-            <button type="submit">Enviar reseña</button>
-        </form>
+    <h2 class="bienvenido">BIENVENIDO</h2>
+    <section class="formularioL">
+            <div class="ec">
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="Email">
+                <label class="rojo" for="email">Obligatorio.</label>
+            </div>
+            <div class="ec">
+                <label for="contra">Contraseña</label>
+                <input type="password" name="contra" placeholder="Contraseña">
+                <label class="rojo" for="email">Obligatorio.</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="recordarme"><span>Recordarme</span>
+            </div>
+            <p class="rojo centro">La combinacion ingresada de email y contraseña no es válida.</p>
+            <div class="rc">
+                <a href="index.html" class="botonLR">Ingresar</a>
+                <a href="register.html" class="botonLR">Crear cuenta</a>    
+            </div>
     </section>
     <footer class="footer">
         <div class="fContainer">
