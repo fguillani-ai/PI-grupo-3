@@ -424,3 +424,38 @@ footer {
   resize: vertical;
   font-size: 14px;
 }
+
+.category {
+    flex-direction: column;
+    width: 310px;
+    background: #0a2e12;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 12px 0; 
+    border-radius: 15px;
+}
+.category a {
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 300px;
+}
+.category ul li{
+    margin-top: 50px;
+    list-style-type: none;
+}
+.category a:hover {
+    color: #a3d18f;
+}
+
+.frutoS h2{
+    color: #415A3B;
+    font-weight: bold;
+}
+
+.frutoS{
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 50px;
+}
