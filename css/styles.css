@@ -459,3 +459,30 @@ footer {
     margin-left: 50px;
     margin-top: 50px;
 }
+
+@media(max-width: 420px){
+    /* nav */
+    .navSup {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+  /* logo y buscador */
+    .logo-buscador {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .logo { 
+        max-width: 30vw;
+    }
+
+    .buscador {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+}
