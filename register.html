@@ -18,44 +18,40 @@
             </ul> 
         </nav>
         <section class="logo-buscador">
-            <a href="index.html"><img src="./css/img/LogoNF.png" alt="logo" class="logo"></a>
+            <a href="index.html"><img src="./img/logoNF.png" alt="logo" class="logo"></a>
             <form action="searchResult.html" class="search" method="get" >
                 <input type="text" placeholder="¿Qué estás buscando?" class="buscador">
                 <button type="submit">Buscar</button>
             </form>
             <div class="iconos">
-                <a href="#"><img src="./css/img/corazon.png" alt="Favoritos"></a>
-                <a href="#"><img src="./css/img/carrito.png" alt="Carrito"></a>
+                <a href="#"><img src="./img/corazon.png" alt="Favoritos"></a>
+                <a href="#"><img src="./img/carrito.png" alt="Carrito"></a>
             </div>
         </section>
     </header>
     <h2 class="bienvenido">REGISTRATE</h2>
-        <form  action="./login.html" class="formularioR" method="get">
+        <form class="formularioR" method="get">
             <div class="ec">
                 <label for="nombre">Email</label>
-                <input type="email" name="email" placeholder="Ingresá tu email">
-
-                <input type="email" name="email2" id="" placeholder="test">
+                <input type="email" name="email" placeholder="Ingresá tu email" required>
                 <p class="rojo">Obligatorio.</p>
             </div>
             <div class="ec">
                 <label for="contra">Contraseña</label>
-                <input type="text" name="contra" placeholder="password">
+                <input type="password" name="contra" placeholder="password" required>
                 <p class="rojo">Obligatorio.</p>
             </div>
             <div class="ec">
                 <label for="contra"> Repetir contraseña</label>
-                <input type="text" name="contra" placeholder="password">
+                <input type="password" name="contra" placeholder="password" required>
                 <p class="rojo">Obligatorio.</p>
             </div>
             <div class="checkboxR">
                 <input type="checkbox" name="G"><span>Acepto los terminos y condiciones.</span>
             </div>
             <div class="rc">
-                <button type="submit">
-                    Enviar
-                </button>
-                <a href="login.html" class="botonLR">Ya tengo cuenta</a>    
+                <button type="submit" formaction="index.html" class="botonLR"> Ingresar </button>
+                <button type="submit" formaction="login.html" class="botonLR"> Ya tengo cuenta </button>
             </div>
         </form>
     <footer class="footer">
