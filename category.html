@@ -8,19 +8,24 @@
 </head>
 <body>
      <header>
-        <div class="navSup">
-            <a href="#">Sucursales</a>
-            <a href="#">Quiénes Somos</a>
-            <a href="#">Contáctenos</a>
-            <a href="login.html">Iniciar Sesión</a>
-            <a href="register.html">Crear Cuenta</a>
-        </div>
+        <nav class="navSup">
+            <ul>
+                <li><a href="#">Sucursales</a></li>
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Contáctenos</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="register.html">Crear Cuenta</a></li>
+            </ul> 
+        </nav>
         <section class="logo-buscador">
-            <a href="index.html"><img src="./css/img/LogoNF.png" alt="logo" class="logo"></a>
-            <input type="text" placeholder="¿Qué estás buscando?" class="buscador">
+            <a href="index.html"><img src="./img/logoNF.png" alt="logo" class="logo"></a>
+            <form action="searchResult.html" class="search" method="get" >
+                <input type="text" placeholder="¿Qué estás buscando?" class="buscador">
+            <button type="submit">Buscar</button>
+            </form>
             <div class="iconos">
-                <a href="#"><img src="./css/img/corazon.png" alt="Favoritos"></a>
-                <a href="#"><img src="./css/img/carrito.png" alt="Carrito"></a>
+                <a href="#"><img src="./img/corazon.png" alt="Favoritos"></a>
+                <a href="#"><img src="./img/carrito.png" alt="Carrito"></a>
             </div>
         </section>
     </header>
@@ -30,10 +35,10 @@
             <ul>
                 <li><a href="index.html">Productos Destacados</a></li>
                 <li><a href="category.html">Frutos Secos</a></li>
-                <li><a href="#">Fruta Deshidratada</a></li>
-                <li><a href="#">Infusiones</a></li>
-                <li><a href="#">Celíacos</a></li>
-                <li><a href="#">Ofertas</a> </li> 
+                <li><a href="category.html">Fruta Deshidratada</a></li>
+                <li><a href="category.html">Infusiones</a></li>
+                <li><a href="category.html">Celíacos</a></li>
+                <li><a href="category.html">Ofertas</a> </li> 
             </ul>
         </nav>
 
@@ -41,7 +46,7 @@
             <h2>Frutos Secos</h2>
                 <section class="productos">
                     <div class="articulo">
-                        <img src="./css/img/Almendras.png">
+                        <img src="./img/almendras.png">
                         <div class="a-content">
                             <h3>Almendras</h3>
                             <p>Crujientes y naturalmente dulces. Fuente de grasas buenas y energía limpia.</p>
@@ -51,7 +56,7 @@
                         </div>
                     </div>
                     <div class="articulo">
-                        <img src="./css/img/Mix de FS.png">
+                        <img src="./img/mixFS.png">
                         <div class="a-content">
                             <h3>Mix de Frutos Secos</h3>
                             <p>Mezcla equilibrada de crocancia y sabor. Energía práctica para todo el día.</p>

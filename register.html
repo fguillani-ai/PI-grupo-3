@@ -8,16 +8,21 @@
 </head>
 <body>
      <header>
-        <div class="navSup">
-            <a href="#">Sucursales</a>
-            <a href="#">Quiénes Somos</a>
-            <a href="#">Contáctenos</a>
-            <a href="login.html">Iniciar Sesión</a>
-            <a href="register.html">Crear Cuenta</a>
-        </div>
+        <nav class="navSup">
+            <ul>
+                <li><a href="#">Sucursales</a></li>
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Contáctenos</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="register.html">Crear Cuenta</a></li>
+            </ul> 
+        </nav>
         <section class="logo-buscador">
             <a href="index.html"><img src="./css/img/LogoNF.png" alt="logo" class="logo"></a>
-            <input type="text" placeholder="¿Qué estás buscando?" class="buscador">
+            <form action="searchResult.html" class="search" method="get" >
+                <input type="text" placeholder="¿Qué estás buscando?" class="buscador">
+                <button type="submit">Buscar</button>
+            </form>
             <div class="iconos">
                 <a href="#"><img src="./css/img/corazon.png" alt="Favoritos"></a>
                 <a href="#"><img src="./css/img/carrito.png" alt="Carrito"></a>
@@ -25,10 +30,12 @@
         </section>
     </header>
     <h2 class="bienvenido">REGISTRATE</h2>
-        <section class="formularioR">
+        <form  action="./login.html" class="formularioR" method="get">
             <div class="ec">
                 <label for="nombre">Email</label>
-                <input type="text" name="email" placeholder="Ingresá tu email">
+                <input type="email" name="email" placeholder="Ingresá tu email">
+
+                <input type="email" name="email2" id="" placeholder="test">
                 <p class="rojo">Obligatorio.</p>
             </div>
             <div class="ec">
@@ -45,10 +52,12 @@
                 <input type="checkbox" name="G"><span>Acepto los terminos y condiciones.</span>
             </div>
             <div class="rc">
-                <a href="index.html" class="botonLR">Registrarme</a>
+                <button type="submit">
+                    Enviar
+                </button>
                 <a href="login.html" class="botonLR">Ya tengo cuenta</a>    
             </div>
-        </section>
+        </form>
     <footer class="footer">
         <div class="fContainer">
             <div class="fSection">

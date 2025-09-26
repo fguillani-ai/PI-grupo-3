@@ -7,6 +7,14 @@ body {
 }
 .navSup {
     margin-top: 5px;
+    list-style-type: none;
+    align-content: center;
+}
+.navSup ul{
+    list-style-type: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
 }
 .navSup a {
     text-decoration: none;
@@ -92,7 +100,7 @@ main{
     color: #a3d18f;
 }
 .banner {
-    background: url(./img/banner.png) no-repeat center/cover;
+    background: url(../img/banner.png) no-repeat center/cover;
     height: 300px;
     display: flex;
     align-items: center;
@@ -460,32 +468,26 @@ footer {
     margin-top: 50px;
 }
 
-@media(max-width: 420px){
-    /* nav */
+@media(max-width: 630px){
+
     .navSup {
         flex-direction: column;
         align-items: center;
         gap: 8px;
         font-size: 14px;
     }
-
-  /* logo y buscador */
     .logo-buscador {
         flex-direction: column;
         text-align: center;
         gap: 12px;
     }
-
     .logo { 
         max-width: 30vw;
     }
-
     .buscador {
         width: 90%;
         margin: 10px auto;
     }
-
-/* menú categorías */
    .categorias ul,
    .category ul {
        flex-direction: column;
@@ -504,9 +506,6 @@ footer {
        margin-left: 15px;
        list-style-type: none;
 }
-
-
- /* productos */
    .productos {
        display: flex;
        flex-direction: column;
@@ -514,8 +513,6 @@ footer {
        padding: 15px;
        margin-right: 40px;
    }
-
-
    .articulo {
        width: 100%;
        padding: 12px;
@@ -533,34 +530,22 @@ footer {
        width: 35vw;
        min-height: 450px;
    }
-
-
- /* formularios */
    .formularioL,
    .formularioR {
        max-width: 95%;
        margin: 15px auto;
        padding: 15px;
    }
-
-
- /* footer */
    .fContainer {
        display: flex;
        flex-direction: column;
        text-align: center;
        gap: 15px;
    }
-
-
    .fSection {
        width: 100%;
    }
-
-
    .footerAbajo {
        font-size: 12px;
    }
-
-
 }
