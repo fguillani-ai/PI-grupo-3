@@ -58,6 +58,10 @@ header {
     border-radius: 25px;
     background: #fff;
 }
+.botarr{
+    background-color: #0a2e12;
+    color: white;
+}
 .iconos {
     display: flex;
     align-items: center;
