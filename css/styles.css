@@ -267,48 +267,39 @@ footer {
 .detalle h4{
     font-size: 15px;
 }
-.review-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.reviews {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-top: 2px solid #a3d18f;
 }
-.review-form h2 {
-    margin-bottom: 20px;
-    color: #2E7D32;
-    text-align: center;
+.reviews h2 {
+  margin-bottom: 20px;
+  color: #2E7D32;
+  font-size: 1.5em;
 }
-.review-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.review {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.review-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #415A3B;
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
 }
-.review-form input,
-.review-form select,
-.review-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1em;
+.review-rating {
+  font-size: 1.2em;
+  color: #FFD700; 
+  margin-bottom: 10px;
 }
-.review-form button {
-    background: #415A3B;
-    color: white;
-    font-weight: bold;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.review-form button:hover {
-    background: #2E7D32;
+.review-text {
+  margin: 0;
+  color: #333;
 }
 /* login.html */
 .bienvenido{
