@@ -30,15 +30,15 @@
         </section>
     </header>
     <h2 class="bienvenido">BIENVENIDO</h2>
-    <section class="formularioL">
+    <form method="get" class="formularioL"> 
             <div class="ec">
                 <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Email">
+                <input type="email" name="email" placeholder="Email" required>
                 <label class="rojo" for="email">Obligatorio.</label>
             </div>
             <div class="ec">
                 <label for="contra">Contraseña</label>
-                <input type="password" name="contra" placeholder="Contraseña">
+                <input type="password" name="contra" placeholder="Contraseña" required>
                 <label class="rojo" for="email">Obligatorio.</label>
             </div>
             <div class="checkbox">
@@ -46,10 +46,10 @@
             </div>
             <p class="rojo centro">La combinacion ingresada de email y contraseña no es válida.</p>
             <div class="rc">
-                <a href="index.html" class="botonLR">Ingresar</a>
-                <a href="register.html" class="botonLR">Crear cuenta</a>    
+                <button type= "submit" formaction="index.html" class="botonLR">Ingresar</button>
+                <button type= "submit"  formaction="register.html" class="botonLR">Crear cuenta</button>    
             </div>
-    </section>
+    </form>
     <footer class="footer">
         <div class="fContainer">
             <div class="fSection">
