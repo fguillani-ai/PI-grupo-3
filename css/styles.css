@@ -516,5 +516,51 @@ footer {
    }
 
 
+   .articulo {
+       width: 100%;
+       padding: 12px;
+       background: white;
+       border-radius: 12px;
+       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       overflow: hidden;
+       transition: transform 0.2s;
+       padding: 15px;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       height: 420px;
+       flex: 1 1 250px;
+       width: 35vw;
+       min-height: 450px;
+   }
+
+
+ /* formularios */
+   .formularioL,
+   .formularioR {
+       max-width: 95%;
+       margin: 15px auto;
+       padding: 15px;
+   }
+
+
+ /* footer */
+   .fContainer {
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       gap: 15px;
+   }
+
+
+   .fSection {
+       width: 100%;
+   }
+
+
+   .footerAbajo {
+       font-size: 12px;
+   }
+
 
 }
