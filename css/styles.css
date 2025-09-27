@@ -110,7 +110,7 @@ main{
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2em;
+    font-size: 32px;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 }
@@ -280,7 +280,7 @@ footer {
 .reviews h2 {
   margin-bottom: 20px;
   color: #2E7D32;
-  font-size: 1.5em;
+  font-size: 24px;
 }
 .review {
   background: #fff;
@@ -292,13 +292,13 @@ footer {
 .review-header {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9em;
+  font-size: 15px;
   color: #666;
   margin-bottom: 5px;
 }
 .review-rating {
-  font-size: 1.2em;
-  color: #FFD700; 
+  font-size: 19px;
+  color: #c4a911; 
   margin-bottom: 10px;
 }
 .review-text {
