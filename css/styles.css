@@ -360,7 +360,6 @@ footer {
     width: auto;
     margin: 0;
 }
-
 .ec > label{
     font-weight: 700;
     margin-bottom: 4px;
@@ -399,7 +398,6 @@ footer {
     box-sizing: border-box;
     gap: 15px;
 }
-
 .checkboxR{
     margin-left: 50px;
     display: flex;
@@ -408,7 +406,6 @@ footer {
     gap: 10px;
     width: 80%;
 }
-
 .rc{
     display: flex;
     justify-content: center;
@@ -417,7 +414,6 @@ footer {
     margin: 0 auto;
     gap: 20px;
 }
-
 .ec textarea {
   width: 80%; 
   padding: 10px;
@@ -427,7 +423,6 @@ footer {
   resize: vertical;
   font-size: 14px;
 }
-
 .category {
     flex-direction: column;
     width: 310px;
@@ -451,20 +446,17 @@ footer {
 .category a:hover {
     color: #a3d18f;
 }
-
 .frutoS h2{
     color: #415A3B;
     font-weight: bold;
 }
-
 .frutoS{
     flex-direction: column;
     margin-left: 50px;
     margin-top: 50px;
 }
 
-@media(max-width: 630px){
-
+@media(max-width: 420px){
     .navSup {
         flex-direction: column;
         align-items: center;
@@ -495,12 +487,12 @@ footer {
        color: white;
        text-decoration: none;
        margin-top: 300px;
-}
+    }
    .categorias ul li{
        margin-top: 50px;
        margin-left: 15px;
        list-style-type: none;
-}
+   }
    .productos {
        display: flex;
        flex-direction: column;
@@ -543,4 +535,15 @@ footer {
    .footerAbajo {
        font-size: 12px;
    }
+    .navSup ul{
+        flex-direction: column;
+    }
+    .navSup a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 16px;
+        border-top: 1px solid #e5e7eb;
+    }
 }
