@@ -329,7 +329,7 @@ footer {
 .formularioL{
     flex-direction: column;
     max-width: 500px;
-    height: 500px;
+    height: 550px;
     margin: 0 auto;
     background-color: #a3d18f;
     border-radius: 10px;

@@ -1,6 +1,7 @@
 // validar e mail, validar contraseña ¿Guardar info si pone recordarme?
 window.addEventListener('load', function() {
    let formulario = document.querySelector('.formularioL');
+   let name = document.querySelector('.nombre');
    let email = document.querySelector('.email');
    let password = document.querySelector('.contra');
 
@@ -25,8 +26,7 @@ window.addEventListener('load', function() {
 
 
        if (!errores) {
-           localStorage.setItem('usuarioLogueado', email.value);
-          
+           localStorage.setItem('usuarioLogueado', name.value);
            window.location.href = 'index.html';
        }
    });

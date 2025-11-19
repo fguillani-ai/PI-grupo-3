@@ -1,3 +1,4 @@
+fetch(`https://dummyjson.com/products`)
 window.addEventListener('load', function() {
 
    let usuario = localStorage.getItem('usuarioLogueado');

@@ -1,3 +1,4 @@
+fetch(`https://dummyjson.com/products/ ${id}`)
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
     let busqueda = document.querySelector('.buscador');
