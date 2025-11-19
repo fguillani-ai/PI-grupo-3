@@ -1,4 +1,39 @@
+// validar e mail, validar contraseña ¿Guardar info si pone recordarme?
+window.addEventListener('load', function() {
+   let formulario = document.querySelector('.formularioL');
+   let email = document.querySelector('.email');
+   let password = document.querySelector('.contra');
 
+
+   formulario.addEventListener('submit', function(evento) {
+       evento.preventDefault();
+
+       let errores = false;
+
+       if (email.value == "") {
+           alert("El campo email es obligatorio.");
+           errores = true;
+       }
+       else if (password.value == "") {
+           alert("El campo contraseña es obligatorio.");
+           errores = true;
+       }
+       else if (password.value.length < 6) {
+           alert("La contraseña debe tener al menos 6 caracteres.");
+           errores = true;
+       }
+
+
+       if (!errores) {
+           localStorage.setItem('usuarioLogueado', email.value);
+          
+           window.location.href = 'index.html';
+       }
+   });
+});
+
+
+// barra de navegador
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
     let busqueda = document.querySelector('.buscador');
