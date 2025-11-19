@@ -1,6 +1,3 @@
-let mensaje = "Estimado cliente, realizar su pedido debe iniciar sesion! Muchas gracias:)";
-alert(mensaje);
-
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
     let busqueda = document.querySelector('.buscador');
@@ -15,4 +12,4 @@ window.addEventListener('load', function() {
         }
     });
 });
-    
+
