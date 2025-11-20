@@ -1,5 +1,26 @@
-fetch(`https://dummyjson.com/products/ ${id}`)
-//terminar
+let titulo = document.querySelector('.titulo');
+let imagen = document.querySelector('.imagen');
+let descripcion = document.querySelector('.descripcion');
+let marca = document.querySelector('.marca');
+let precio = document.querySelector('.precio');
+let stock = document.querySelector('.stock');
+let id = new URLSearchParams(location.search).get('id');
+
+fetch(`https://dummyjson.com/products/${id}`)
+    .then(function(respuesta) {
+        return respuesta.json();
+    })
+    .then(function(data) {
+        titulo.innerText = data.title;
+        imagen.src = data.images;
+        descripcion.innerText = data.description
+        marca.innerText = data.brand;
+        precio.innerText = data.price;
+        stock.innerText = `Actualmente hay: ${data.stock} disponibles!`
+    })
+    .catch(function(error) {
+        console.log('El error es: ' + error);
+    });
 
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
@@ -16,3 +37,4 @@ window.addEventListener('load', function() {
     });
 });
 
+//reseña dinamica

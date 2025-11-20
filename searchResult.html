@@ -20,7 +20,7 @@
         <section class="logo-buscador">
             <a href="index.html"><img src="./img/logoNF.png" alt="logo" class="logo"></a>
             <form action="searchResult.html" class="search" method="get" >
-                <input type="text" placeholder="¿Qué estás buscando?" class="buscador">
+                <input type="text" name="busqueda" placeholder="¿Qué estás buscando?" class="buscador">
             <button type="submit" class="botarr">Buscar</button>
             </form>
             <div class="iconos">
@@ -33,16 +33,16 @@
         <nav class="category">
             <ul>
                 <li><a href="index.html">Productos Destacados</a></li>
-                <li><a href="category.html">Frutos Secos</a></li>
-                <li><a href="category.html">Fruta Deshidratada</a></li>
-                <li><a href="category.html">Infusiones</a></li>
-                <li><a href="category.html">Celíacos</a></li>
-                <li><a href="category.html">Ofertas</a> </li> 
+                <li><a href="category.html?cat=smartphones">Smartphones</a></li>
+                <li><a href="category.html?cat=laptops">Laptops</a></li>
+                <li><a href="category.html?cat=groceries">Groceries</a></li>
+                <li><a href="category.html?cat=fragrances">Fragrances</a></li>
+                <li><a href="category.html?cat=skincare">Skincare</a></li>
             </ul>
         </nav>
         <div class="frutoS">
-            <h2>Frutos Secos</h2>
-                <section class="productos"></section>
+            <h2 class="h2Search"></h2>
+            <section class="productos"></section>
         </div>
     </main>
     <footer class="footer">

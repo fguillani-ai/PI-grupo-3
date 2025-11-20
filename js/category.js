@@ -1,16 +1,17 @@
-function cargarProductos() {
-    let category = new URLSearchParams(location.search).get('cat');
-    fetch(`https://dummyjson.com/products`)
+let categoria = new URLSearchParams(location.search).get('cat');
+let titulo = document.querySelector('#categoriaH2')
+function cargarCategorias() {
+    fetch(`https://dummyjson.com/products/category/${categoria}`)
         .then(function(response){
             return response.json();
         })
         .then(function (data) {
-            const lista = document.querySelector('.productos');
+            let lista = document.querySelector('.productos');
+            titulo.innerText = `Categoria: ${categoria}`;
 
-            for (let i = 0; i < productos.length ; i++) {
-                const p= productos[i];
-                if (p.category && productos.category === category){
-                    lista.innerHTML+=`
+            for (let i = 0; i < data.products.length; i++) {
+                let p = data.products[i];
+                let mercancia =`
                         <div class="articulo">
                             <img class= "image" src= "${p.thumbnail}" alt="${p.title}">
                             <div class="a-content">
@@ -20,18 +21,19 @@ function cargarProductos() {
                                 <a href="product.html?id=${p.id}" class="boton">ver más</a>
                             </div>
                         </div>
-                    `;    
+                    `; 
+                lista.innerHTML += mercancia;       
                 }
-            }
-        })
+            })
         .catch(function (error) {
             console.log(`El error es:` + error);
             
         });
 }
+cargarCategorias();
 
-document.querySelector("#cargarMas").addEventListener("click", cargarProductos)
-cargarProductos();
+document.querySelector("#cargarMas").addEventListener("click", cargarCategorias)
+
 
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
@@ -49,4 +51,4 @@ window.addEventListener('load', function() {
 });
 
 
-//ver q esta pasando
+//terminado?
