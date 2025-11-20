@@ -79,4 +79,5 @@ window.addEventListener('load', function() {
         }
     });
 });
-    
+
+//terminar validacion

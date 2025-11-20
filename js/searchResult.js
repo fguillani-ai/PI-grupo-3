@@ -1,4 +1,18 @@
+let palabraBuscada = obj.get("search");
+console.log(palabraBuscada);
+
 fetch(`https://dummyjson.com/products=${palabraBuscada}`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+     //terminar   
+    })
+   .catch(function (error) {
+            console.log(`El error es:` + error);
+            
+        }); 
+
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
     let busqueda = document.querySelector('.buscador');

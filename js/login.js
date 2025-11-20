@@ -48,4 +48,6 @@ window.addEventListener('load', function() {
         }
     });
 });
+
+//terminar validacion y logica
     
