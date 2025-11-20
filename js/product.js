@@ -13,7 +13,8 @@ fetch(`https://dummyjson.com/products/${id}`)
     .then(function(data) {
         titulo.innerText = data.title;
         imagen.src = data.images;
-        descripcion.innerText = data.description
+        descripcion.innerText = data.description;
+        cate.innerText = data.category;
         marca.innerText = data.brand;
         precio.innerText = data.price;
         stock.innerText = `Actualmente hay: ${data.stock} disponibles!`
@@ -21,6 +22,8 @@ fetch(`https://dummyjson.com/products/${id}`)
     .catch(function(error) {
         console.log('El error es: ' + error);
     });
+
+    document.querySelector(".cate").addEventListener("click", ".cate") 
 
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
