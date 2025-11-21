@@ -1,33 +1,79 @@
-localStorage.clear();
-let form = document.querySelector(".formularioR");
-let nombreUsuario = "";
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.formularioR');
+  if (!form) return;
 
-form.addEventListener("submit", function(e){
-    let usuario = {
-        nombre: this.nombre.value,
-        apellido: this.apellido.value,
-        email: this.email.value,
-        contra: this.contra1.value
+  const inputNombre = form.elements['nombre'];
+  const inputApellido = form.elements['apellido'];
+  const inputEmail = form.elements['email'];
+  const inputPass1 = form.elements['contra1'];
+  const inputPass2 = form.elements['contra2'];
+  const checkTerminos = form.elements['G'];
+
+  const bIngresar = document.getElementById('bIngresar'); 
+  const bTengoCuenta = document.getElementById('bTengoCuenta'); 
+
+  let accion = '';
+
+  bIngresar.addEventListener('click', function () {
+    accion = 'ingresar';
+  });
+
+  bTengoCuenta.addEventListener('click', function (e) {
+    e.preventDefault();    
+    window.location.href = 'login.html';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();  
+
+    if (accion !== 'ingresar') return;
+
+    const nombre = (inputNombre.value || '').trim();
+    const apellido = (inputApellido.value || '').trim();
+    const email = (inputEmail.value || '').trim();
+    const pass1 = inputPass1.value || '';
+    const pass2 = inputPass2.value || '';
+
+    if (nombre.length < 4) { 
+        alert('El nombre debe tener al menos 4 caracteres.'); inputNombre.focus(); 
+        return; 
     }
-    let c1 = this.contra1.value;
-    let c2 = this.contra2.value;
 
-    e.preventDefault();
+    if (apellido.length < 4){ 
+        alert('El apellido debe tener al menos 4 caracteres.');
+        inputApellido.focus(); 
+        return; 
+    }
 
-    localStorage.setItem('nombreUsuario', usuario.nombre);
+    if (email.indexOf('@') === -1){ 
+        alert('El email debe contener un "@".'); 
+        inputEmail.focus(); 
+        return; 
+    }
+
+    if (pass1.length < 6){ 
+        alert('La contraseña debe tener al menos 6 caracteres.');
+        inputPass1.focus(); 
+        return; 
+    }
+
+    if (pass1 !== pass2){ 
+        alert('Las contraseñas no coinciden.'); 
+        inputPass2.focus(); 
+        return; 
+    }
+
+    if (!checkTerminos.checked){ 
+        alert('Debes aceptar los términos y condiciones.'); 
+        checkTerminos.focus(); 
+        return; 
+    }
+
+    localStorage.setItem('nombreUsuario', nombre);
+    window.location.href = 'index.html';
+  });
 });
 
-//validar que se acepten los terminos y condiciones
-form.addEventListener('submit', function (e){
-    let acepto = this.elements['G'].checked;
-    if (!acepto) {
-        e.preventDefault();
-        alert('Debes aceptar los términos y condiciones.')
-        return;
-    }
-  })
-
-//barra de navegador
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
     let busqueda = document.querySelector('.buscador');
@@ -40,51 +86,5 @@ window.addEventListener('load', function() {
             e.preventDefault();
             alert("La busqueda debe tener al menos 3 caracteres.");
         }
-    });
-});
-
-//terminar validacion
-window.addEventListener('load', function() {
-    let formulario = document.querySelector('.formularioR');
-    
-    let inputEmail = document.querySelector('.mail');
-    let inputPass = document.querySelector('.passw');
-    let contra2 = document.querySelector('contras');
-
-    formulario.addEventListener('submit', function(e) {
-        
-        let boton = e.submitter;
-        let accion = boton.getAttribute('formaction');
-
-        if (accion && accion.includes('login.html')) {
-            return; 
-        }
-
-        e.preventDefault();
-
-        let errores = false;
-        let valorEmail = inputEmail.value;
-        let valorContra = inputPass.value;
-        let contra2 = contra2.value;
-
-       if (valorEmail === "") {
-           alert("El campo email es obligatorio.");
-           errores = true;
-       }
-       else if (valorContra === "") {
-           alert("El campo contraseña es obligatorio.");
-           errores = true;
-       }
-       else if (valorContra.length < 6) {
-           alert("La contraseña debe tener al menos 6 caracteres.");
-           errores = true;
-       }
-       else if (valorContra !== contra2) {
-           alert("Las contraseñas no coinciden.");
-           errores = true;
-       }
-       if (!errores) {
-           window.location.href = 'login.html';
-       }
     });
 });

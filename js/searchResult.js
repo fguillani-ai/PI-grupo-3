@@ -11,7 +11,7 @@ function cargarCategorias() {
         })
         .then(function (data) {
                 if (data.products.length === 0){
-                    res.innerText += `No se encontraron resultados`
+                    res.innerText += `No se encontraron resultados para: "${palabraBuscada}"`
                 }
                 else{
                 res.innerText += `Resultados de busqueda para: "${palabraBuscada}"`
