@@ -81,3 +81,28 @@ window.addEventListener('load', function() {
 });
 
 //terminar validacion
+window.addEventListener('load', function() {
+    let formulario = document.querySelector('.formularioR');
+    
+    let inputEmail = document.querySelector('.mail');
+    let inputPass = document.querySelector('.passw');
+    let contra2 = document.querySelector('contras');
+
+    formulario.addEventListener('submit', function(e) {
+        
+        let boton = e.submitter;
+        let accion = boton.getAttribute('formaction');
+
+        if (accion && accion.includes('login.html')) {
+            return; 
+        }
+
+        e.preventDefault();
+
+        let errores = false;
+        let valorEmail = inputEmail.value;
+        let valorContra = inputPass.value;
+        let contra2 = contra2.value;
+
+    });
+});
