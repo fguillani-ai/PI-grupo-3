@@ -5,6 +5,11 @@ let marca = document.querySelector('.marca');
 let precio = document.querySelector('.precio');
 let stock = document.querySelector('.stock');
 let id = new URLSearchParams(location.search).get('id');
+let cateLink = document.querySelector('.cate');
+let nombre = document.querySelector('.usarioR');
+let fecha = document.querySelector('.fechaR');
+let rating = document.querySelector('.estrellasR');
+let text = document.querySelector('.comentarioR');
 
 fetch(`https://dummyjson.com/products/${id}`)
     .then(function(respuesta) {
@@ -18,7 +23,16 @@ fetch(`https://dummyjson.com/products/${id}`)
         descripcion.innerText = data.description;
         marca.innerText = data.brand;
         precio.innerText = data.price;
-        stock.innerText = `Actualmente hay: ${data.stock} disponibles!`
+        stock.innerText = `Actualmente hay: ${data.stock} disponibles!` 
+        if(cateLink & data.category ){
+            cateLink.textContent = `categoria: ${data.category}`;
+            cateLink.href = `category.html?cate = ${data.category}`;
+        }
+        nombre.innerText = data.reviwerName;
+        fecha.innerText = data.date;
+        rating.innerText = data.rating;
+        text.innerText = data.comment;
+
     })
     .catch(function(error) {
         console.log('El error es: ' + error);
@@ -40,4 +54,4 @@ window.addEventListener('load', function() {
     });
 });
 
-//reseña dinamica..
+//reseña dinamica....
