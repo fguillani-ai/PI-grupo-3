@@ -11,10 +11,11 @@ fetch(`https://dummyjson.com/products/${id}`)
         return respuesta.json();
     })
     .then(function(data) {
+        console.log(data);
+        
         titulo.innerText = data.title;
-        imagen.src = data.images;
+        imagen.src = data.images[0];
         descripcion.innerText = data.description;
-        cate.innerText = data.category;
         marca.innerText = data.brand;
         precio.innerText = data.price;
         stock.innerText = `Actualmente hay: ${data.stock} disponibles!`
@@ -23,7 +24,6 @@ fetch(`https://dummyjson.com/products/${id}`)
         console.log('El error es: ' + error);
     });
 
-    document.querySelector(".cate").addEventListener("click", ".cate") 
 
 window.addEventListener('load', function() {
     let formulario = document.querySelector('.search');
@@ -40,4 +40,4 @@ window.addEventListener('load', function() {
     });
 });
 
-//reseña dinamica
+//reseña dinamica..
