@@ -1,4 +1,4 @@
-let categoria = new URLSearchParams(location.search).get('cat');
+let categoria = new URLSearchParams(location.search).get('cate');
 let titulo = document.querySelector('#categoriaH2')
 function cargarCategorias() {
     fetch(`https://dummyjson.com/products/category/${categoria}`)
@@ -49,6 +49,3 @@ window.addEventListener('load', function() {
         }
     });
 });
-
-
-//terminado?

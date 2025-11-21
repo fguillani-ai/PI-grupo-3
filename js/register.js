@@ -1,4 +1,3 @@
-//guardo el nombre del usuario
 localStorage.clear();
 let form = document.querySelector(".formularioR");
 let nombreUsuario = "";
@@ -17,42 +16,6 @@ form.addEventListener("submit", function(e){
 
     localStorage.setItem('nombreUsuario', usuario.nombre);
 });
-
-//validar email (largo y arroba)
-let cantArrobas = 0;
-let i = 0;
-function emailValido(email, minimo = 6) {
-    if (email.length < minimo) return false;
-
-    cantArrobas = 0;
-    for (i = 0; i < email.length; i++) {
-        if(email[i]==="@"){
-            cantArrobas++;
-            if (cantArrobas > 1){
-                return false;
-            }
-        }
-    }
-    return cantArrobas ===1;    
-}
-
-//validar contraseñas (largo e iguales)
-let n = 0;
-let t = 0;
-function contraValida(contra1, contra2, minimo=6) {
-    if (contra1.length<minimo || contra2.length<minimo) return false;
-    if (contra1.length !== contra2.length) return false; 
-
-    for (t = 0, n = 0; t < contra1.length; t++){
-        if (contra1[t] === contra2[t]){
-            n++;
-        }
-        else{
-            return false;  
-        } 
-    }
-    return n === contra1.length;
-}
 
 //validar que se acepten los terminos y condiciones
 form.addEventListener('submit', function (e){
@@ -104,7 +67,6 @@ window.addEventListener('load', function() {
         let valorContra = inputPass.value;
         let contra2 = contra2.value;
 
-
        if (valorEmail === "") {
            alert("El campo email es obligatorio.");
            errores = true;
@@ -121,11 +83,8 @@ window.addEventListener('load', function() {
            alert("Las contraseñas no coinciden.");
            errores = true;
        }
-
-
        if (!errores) {
            window.location.href = 'login.html';
        }
-
     });
 });
