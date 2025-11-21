@@ -6,7 +6,7 @@ let precio = document.querySelector('.precio');
 let stock = document.querySelector('.stock');
 let id = new URLSearchParams(location.search).get('id');
 let cateLink = document.querySelector('.cate');
-let nombre = document.querySelector('.usarioR');
+let nombre = document.querySelector('.usuarioR');
 let fecha = document.querySelector('.fechaR');
 let rating = document.querySelector('.estrellasR');
 let text = document.querySelector('.comentarioR');
@@ -24,7 +24,7 @@ fetch(`https://dummyjson.com/products/${id}`)
         marca.innerText = data.brand;
         precio.innerText = data.price;
         stock.innerText = `Actualmente hay: ${data.stock} disponibles!` 
-        if(cateLink & data.category ){
+        if(data.category != undefined){
             cateLink.textContent = `categoria: ${data.category}`;
             cateLink.href = `category.html?cate = ${data.category}`;
         }
