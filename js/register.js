@@ -104,5 +104,28 @@ window.addEventListener('load', function() {
         let valorContra = inputPass.value;
         let contra2 = contra2.value;
 
+
+       if (valorEmail === "") {
+           alert("El campo email es obligatorio.");
+           errores = true;
+       }
+       else if (valorContra === "") {
+           alert("El campo contraseña es obligatorio.");
+           errores = true;
+       }
+       else if (valorContra.length < 6) {
+           alert("La contraseña debe tener al menos 6 caracteres.");
+           errores = true;
+       }
+       else if (valorContra !== contra2) {
+           alert("Las contraseñas no coinciden.");
+           errores = true;
+       }
+
+
+       if (!errores) {
+           window.location.href = 'login.html';
+       }
+
     });
 });
